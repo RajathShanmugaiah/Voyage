@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: voyageone build
+name: Voyage build
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -27,7 +27,6 @@ jobs:
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}} 
       run: |
         docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-
     # Runs a set of commands using the runners shell
     - name: docker build
       run: |
@@ -37,4 +36,4 @@ jobs:
         
     - name: docker push
       run: |
-        docker push 0891994/rajath08voyage:latest    
+        docker push 0891994/rajath08voyage:latest
